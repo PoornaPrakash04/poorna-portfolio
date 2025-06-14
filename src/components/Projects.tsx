@@ -1,4 +1,5 @@
 
+
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
 
 const Projects = () => {
@@ -18,7 +19,7 @@ const Projects = () => {
       icon: Bot,
       tags: ['Chatling', 'AI/ML', 'Chatbot'],
       color: 'from-teal-600 to-blue-600',
-      status: 'In Progress',
+      status: 'Completed',
       year: '2025'
     },
     {
@@ -166,3 +167,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
