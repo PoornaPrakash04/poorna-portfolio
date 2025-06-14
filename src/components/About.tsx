@@ -10,23 +10,7 @@ const About = () => {
       icon: GraduationCap,
       status: 'Current',
       color: 'from-purple-500 to-purple-700'
-    },
-    {
-      period: '2020–2022',
-      degree: 'Higher Secondary',
-      institution: 'GMBHSS Attingal',
-      icon: GraduationCap,
-      status: 'Completed',
-      color: 'from-teal-500 to-teal-700'
-    },
-    {
-      period: '2020',
-      degree: '10th Grade',
-      institution: 'SJCSIEMHSS',
-      icon: GraduationCap,
-      status: 'Completed',
-      color: 'from-blue-500 to-blue-700'
-    },
+    }
   ];
 
   return (
@@ -102,11 +86,6 @@ const About = () => {
                 const IconComponent = item.icon;
                 return (
                   <div key={index} className="relative group">
-                    {/* Timeline line */}
-                    {index < education.length - 1 && (
-                      <div className="absolute left-6 top-16 w-0.5 h-16 bg-gradient-to-b from-purple-500 to-teal-500 opacity-30 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    )}
-                    
                     <div className="flex items-start space-x-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         <IconComponent size={20} className="text-white" />
