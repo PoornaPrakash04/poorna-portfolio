@@ -34,8 +34,8 @@ const Hero = () => {
               {/* Outer glow ring */}
               <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/30 via-teal-500/30 to-blue-500/30 rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {/* Main profile container */}
-              <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 via-teal-500 to-blue-500 p-1 animate-spin-slow group-hover:animate-pulse">
+              {/* Main profile container - removed rotation */}
+              <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 via-teal-500 to-blue-500 p-1 group-hover:animate-pulse">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center relative overflow-hidden">
                   {/* Profile image */}
                   <div className="relative z-10 w-72 h-72 rounded-full overflow-hidden border border-gray-600/30">
@@ -132,7 +132,7 @@ const Hero = () => {
         
         {/* Enhanced scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-fade-in delay-1000">
-          <span className="text-xs text-gray-500 mb-2 uppercase tracking-wider">Scroll to explore</span>
+          <span className="text-xs text-gray-500 mb-2 uppercase tracking-wider">I am ready to explore</span>
           <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-gradient-to-b from-purple-400 to-teal-400 rounded-full mt-2 animate-bounce"></div>
           </div>
