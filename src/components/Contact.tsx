@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -24,14 +25,14 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      // Web3Forms endpoint - replace YOUR_ACCESS_KEY with your actual access key
+      // Web3Forms endpoint with your access key
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_ACCESS_KEY_HERE', // Replace with your Web3Forms access key
+          access_key: '163a7fa8-1e74-4497-ac80-b1ed5dbde03b',
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
