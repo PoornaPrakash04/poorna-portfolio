@@ -17,16 +17,9 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center text-gray-400 text-sm">
-              <span>Made with</span>
-              <Heart size={16} className="mx-2 text-red-400" />
-              <span>and</span>
-              <Code size={16} className="mx-2 text-purple-400" />
-              <span>powered by</span>
-              <Coffee size={16} className="mx-2 text-teal-400" />
-            </div>
             
-            <div className="text-gray-400 text-sm">
+            
+            <div className="text-gray-400 text-sm px-[240px] mx-[50px]">
               © {currentYear} Poorna Prakash. All rights reserved.
             </div>
           </div>
