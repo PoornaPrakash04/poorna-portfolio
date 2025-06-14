@@ -1,4 +1,3 @@
-
 import { Award, Users, Code, Calendar, MapPin, Sparkles } from 'lucide-react';
 
 const Experience = () => {
@@ -6,7 +5,7 @@ const Experience = () => {
     {
       role: 'Vice Chairperson',
       organization: 'IEEE SB LBSITW',
-      period: '2024–Present',
+      period: '2025–Present',
       icon: Award,
       description: 'Leading strategic initiatives and fostering technical excellence within the IEEE Student Branch.',
       highlights: ['Strategic Leadership', 'Event Management', 'Team Coordination'],

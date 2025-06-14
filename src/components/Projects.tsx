@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
 
 const Projects = () => {
@@ -10,7 +9,7 @@ const Projects = () => {
       tags: ['Python', 'React', 'Database'],
       color: 'from-purple-600 to-pink-600',
       status: 'Completed',
-      year: '2024'
+      year: '2025'
     },
     {
       title: 'AI Chatbot for Campus FAQs',
@@ -19,7 +18,7 @@ const Projects = () => {
       tags: ['Python', 'AI/ML', 'NLP'],
       color: 'from-teal-600 to-blue-600',
       status: 'In Progress',
-      year: '2024'
+      year: '2025'
     },
     {
       title: 'Netflix UI Clone',
@@ -28,7 +27,7 @@ const Projects = () => {
       tags: ['React', 'CSS', 'Responsive Design'],
       color: 'from-red-600 to-orange-600',
       status: 'Completed',
-      year: '2023'
+      year: '2025'
     },
   ];
 
