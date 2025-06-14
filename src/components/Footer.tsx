@@ -1,3 +1,4 @@
+
 import { Heart, Code, Coffee } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -16,10 +17,10 @@ const Footer = () => {
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-8"></div>
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0">
             
             
-            <div className="text-gray-400 text-sm px-[240px] mx-[50px]">
+            <div className="text-gray-400 text-sm">
               © {currentYear} Poorna Prakash. All rights reserved.
             </div>
           </div>
