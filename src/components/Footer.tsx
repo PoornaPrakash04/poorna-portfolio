@@ -1,7 +1,7 @@
 import { Heart, Code, Coffee } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 border-t border-gray-800 py-[20px]">
+  return <footer className="bg-gray-900 border-t border-gray-800 py-[10px]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Logo/Name */}
