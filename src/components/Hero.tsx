@@ -37,15 +37,13 @@ const Hero = () => {
               {/* Main profile container */}
               <div className="relative w-80 h-80 rounded-full bg-gradient-to-br from-purple-500 via-teal-500 to-blue-500 p-1 animate-spin-slow group-hover:animate-pulse">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center relative overflow-hidden">
-                  {/* Background pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.3)_100%)]"></div>
-                  
-                  {/* Profile initials with enhanced styling */}
-                  <div className="relative z-10 w-72 h-72 rounded-full bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm flex items-center justify-center border border-gray-600/30">
-                    <span className="text-7xl font-bold bg-gradient-to-br from-purple-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
-                      PP
-                    </span>
+                  {/* Profile image */}
+                  <div className="relative z-10 w-72 h-72 rounded-full overflow-hidden border border-gray-600/30">
+                    <img 
+                      src="https://i.postimg.cc/L69tWhRN/poorna-blue-photo.jpg" 
+                      alt="Poorna Prakash" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   
                   {/* Floating particles */}
