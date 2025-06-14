@@ -8,9 +8,9 @@ const Skills = () => {
       icon: Code,
       color: 'from-blue-500 to-cyan-500',
       skills: [
-        { name: 'Python', level: 85, color: 'from-yellow-400 to-yellow-600', trend: 'up' },
-        { name: 'Java', level: 80, color: 'from-red-400 to-red-600', trend: 'up' },
-        { name: 'C', level: 75, color: 'from-blue-400 to-blue-600', trend: 'stable' },
+        { name: 'Python', level: 'Advanced', levelValue: 85, color: 'from-yellow-400 to-yellow-600', trend: 'up' },
+        { name: 'Java', level: 'Advanced', levelValue: 80, color: 'from-red-400 to-red-600', trend: 'up' },
+        { name: 'C', level: 'Intermediate', levelValue: 75, color: 'from-blue-400 to-blue-600', trend: 'stable' },
       ]
     },
     {
@@ -18,9 +18,9 @@ const Skills = () => {
       icon: Database,
       color: 'from-green-500 to-emerald-500',
       skills: [
-        { name: 'DBMS', level: 75, color: 'from-green-400 to-green-600', trend: 'up' },
-        { name: 'Git/GitHub', level: 80, color: 'from-purple-400 to-purple-600', trend: 'up' },
-        { name: 'Web Development', level: 70, color: 'from-teal-400 to-teal-600', trend: 'up' },
+        { name: 'DBMS', level: 'Intermediate', levelValue: 75, color: 'from-green-400 to-green-600', trend: 'up' },
+        { name: 'Git/GitHub', level: 'Advanced', levelValue: 80, color: 'from-purple-400 to-purple-600', trend: 'up' },
+        { name: 'Web Development', level: 'Intermediate', levelValue: 70, color: 'from-teal-400 to-teal-600', trend: 'up' },
       ]
     },
     {
@@ -28,8 +28,8 @@ const Skills = () => {
       icon: Palette,
       color: 'from-pink-500 to-rose-500',
       skills: [
-        { name: 'Canva', level: 65, color: 'from-pink-400 to-pink-600', trend: 'up' },
-        { name: 'UI/UX Design', level: 60, color: 'from-indigo-400 to-indigo-600', trend: 'up' },
+        { name: 'Canva', level: 'Intermediate', levelValue: 65, color: 'from-pink-400 to-pink-600', trend: 'up' },
+        { name: 'UI/UX Design', level: 'Beginner', levelValue: 60, color: 'from-indigo-400 to-indigo-600', trend: 'up' },
       ]
     },
     {
@@ -37,12 +37,25 @@ const Skills = () => {
       icon: Users,
       color: 'from-orange-500 to-amber-500',
       skills: [
-        { name: 'Team Leadership', level: 90, color: 'from-orange-400 to-orange-600', trend: 'up' },
-        { name: 'Communication', level: 85, color: 'from-cyan-400 to-cyan-600', trend: 'stable' },
-        { name: 'Problem Solving', level: 80, color: 'from-lime-400 to-lime-600', trend: 'up' },
+        { name: 'Team Leadership', level: 'Advanced', levelValue: 90, color: 'from-orange-400 to-orange-600', trend: 'up' },
+        { name: 'Communication', level: 'Advanced', levelValue: 85, color: 'from-cyan-400 to-cyan-600', trend: 'stable' },
+        { name: 'Problem Solving', level: 'Advanced', levelValue: 80, color: 'from-lime-400 to-lime-600', trend: 'up' },
       ]
     }
   ];
+
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case 'Beginner':
+        return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
+      case 'Intermediate':
+        return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
+      case 'Advanced':
+        return 'text-green-400 bg-green-400/10 border-green-400/20';
+      default:
+        return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+    }
+  };
 
   const interests = [
     { name: 'Artificial Intelligence', icon: Brain, color: 'from-purple-500 to-purple-700' },
@@ -105,8 +118,8 @@ const Skills = () => {
                           )}
                         </span>
                         <div className="flex items-center space-x-2">
-                          <span className="text-sm text-gray-400 group-hover/skill:text-gray-300 transition-colors duration-300">
-                            {skill.level}%
+                          <span className={`text-xs font-medium px-2 py-1 rounded-full border ${getLevelColor(skill.level)}`}>
+                            {skill.level}
                           </span>
                           <Star className="w-4 h-4 text-yellow-400" />
                         </div>
@@ -115,7 +128,7 @@ const Skills = () => {
                         <div className="w-full bg-gray-700/50 rounded-full h-3 overflow-hidden border border-gray-600/50">
                           <div
                             className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out relative overflow-hidden group-hover/skill:animate-pulse`}
-                            style={{ width: `${skill.level}%` }}
+                            style={{ width: `${skill.levelValue}%` }}
                           >
                             <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
                           </div>
