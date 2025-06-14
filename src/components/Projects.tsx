@@ -1,40 +1,31 @@
-
-
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
-
 const Projects = () => {
-  const projects = [
-    {
-      title: 'Task Flow Manager',
-      description: 'A productivity tool built to streamline academic workflows with intuitive task management and progress tracking.',
-      icon: CheckSquare,
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      color: 'from-purple-600 to-pink-600',
-      status: 'Completed',
-      year: '2025'
-    },
-    {
-      title: 'AI Chatbot for Campus FAQs',
-      description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
-      icon: Bot,
-      tags: ['Chatling', 'AI/ML', 'Chatbot'],
-      color: 'from-teal-600 to-blue-600',
-      status: 'Completed',
-      year: '2025'
-    },
-    {
-      title: 'Netflix UI Clone',
-      description: 'A responsive frontend replica of the Netflix interface showcasing modern web development skills.',
-      icon: Monitor,
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      color: 'from-red-600 to-orange-600',
-      status: 'Completed',
-      year: '2025'
-    },
-  ];
-
-  return (
-    <section id="projects" className="py-20 bg-gray-800/30 relative overflow-hidden">
+  const projects = [{
+    title: 'Task Flow Manager',
+    description: 'A productivity tool built to streamline academic workflows with intuitive task management and progress tracking.',
+    icon: CheckSquare,
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    color: 'from-purple-600 to-pink-600',
+    status: 'Completed',
+    year: '2025'
+  }, {
+    title: 'AI Chatbot for Campus FAQs',
+    description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
+    icon: Bot,
+    tags: ['Chatling', 'AI/ML', 'Chatbot'],
+    color: 'from-teal-600 to-blue-600',
+    status: 'Completed',
+    year: '2025'
+  }, {
+    title: 'Netflix UI Clone',
+    description: 'A responsive frontend replica of the Netflix interface showcasing modern web development skills.',
+    icon: Monitor,
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    color: 'from-red-600 to-orange-600',
+    status: 'Completed',
+    year: '2025'
+  }];
+  return <section id="projects" className="py-20 bg-gray-800/30 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-20 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl"></div>
@@ -44,10 +35,7 @@ const Projects = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/10 to-teal-500/10 border border-purple-500/20 rounded-full mb-6">
-            <Monitor className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-sm text-gray-300">My Work</span>
-          </div>
+          
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured <span className="bg-gradient-to-r from-purple-400 via-teal-400 to-red-400 bg-clip-text text-transparent">Projects</span>
           </h2>
@@ -59,13 +47,10 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
-            const IconComponent = project.icon;
-            return (
-              <div
-                key={index}
-                className="group bg-gray-900/50 rounded-2xl border border-gray-700/50 backdrop-blur-sm overflow-hidden hover:border-purple-500/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-1"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
+          const IconComponent = project.icon;
+          return <div key={index} className="group bg-gray-900/50 rounded-2xl border border-gray-700/50 backdrop-blur-sm overflow-hidden hover:border-purple-500/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-1" style={{
+            animationDelay: `${index * 150}ms`
+          }}>
                 {/* Project Header */}
                 <div className={`h-40 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
                   <div className="absolute inset-0 bg-black/20"></div>
@@ -91,11 +76,7 @@ const Projects = () => {
                   
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
-                    <span className={`text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm border ${
-                      project.status === 'Completed'
-                        ? 'text-green-300 bg-green-500/20 border-green-400/30'
-                        : 'text-yellow-300 bg-yellow-500/20 border-yellow-400/30'
-                    }`}>
+                    <span className={`text-xs font-semibold px-3 py-1 rounded-full backdrop-blur-sm border ${project.status === 'Completed' ? 'text-green-300 bg-green-500/20 border-green-400/30' : 'text-yellow-300 bg-yellow-500/20 border-yellow-400/30'}`}>
                       {project.status}
                     </span>
                   </div>
@@ -119,14 +100,9 @@ const Projects = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className="text-xs font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/20 hover:bg-purple-400/20 transition-colors duration-300"
-                      >
+                    {project.tags.map((tag, tagIndex) => <span key={tagIndex} className="text-xs font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/20 hover:bg-purple-400/20 transition-colors duration-300">
                         {tag}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
 
                   {/* Action Buttons */}
@@ -143,28 +119,19 @@ const Projects = () => {
                 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-teal-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <a
-            href="https://github.com/PoornaPrakash04"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-          >
+          <a href="https://github.com/PoornaPrakash04" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             <Github className="mr-3 group-hover:rotate-12 transition-transform duration-300" size={20} />
             View All Projects
             <Sparkles className="ml-2 w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Projects;
-
