@@ -1,11 +1,7 @@
-
 import { Heart, Code, Coffee } from 'lucide-react';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-[10px]">
+  return <footer className="bg-gray-900 border-t border-gray-800 py-[10px]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Logo/Name */}
@@ -14,17 +10,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="flex justify-center space-x-8 mb-8">
-            {['Home', 'About', 'Experience', 'Projects', 'Skills', 'Contact'].map(item => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-400 hover:text-white transition-colors duration-300"
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+          
 
           {/* Divider */}
           <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-8"></div>
@@ -53,8 +39,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
