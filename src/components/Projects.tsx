@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
 const Projects = () => {
   const projects = [{
@@ -10,7 +9,7 @@ const Projects = () => {
     status: 'Completed',
     year: '2025',
     githubUrl: 'https://github.com/PoornaPrakash04/TaskFlow-Manager',
-    liveUrl: '#'
+    liveUrl: 'https://poorna-prakash04.github.io/TaskFlow-Manager/'
   }, {
     title: 'AI Chatbot for Campus FAQs',
     description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
@@ -20,7 +19,7 @@ const Projects = () => {
     status: 'Completed',
     year: '2025',
     githubUrl: 'https://github.com/PoornaPrakash04/AI-Chatbot-Campus',
-    liveUrl: '#'
+    liveUrl: 'https://poorna-prakash04.github.io/AI-Chatbot-Campus/'
   }, {
     title: 'Netflix UI Clone',
     description: 'A responsive frontend replica of the Netflix interface showcasing modern web development skills.',
@@ -30,7 +29,7 @@ const Projects = () => {
     status: 'Completed',
     year: '2025',
     githubUrl: 'https://github.com/PoornaPrakash04/Netflix-UI-Clone',
-    liveUrl: '#'
+    liveUrl: 'https://poorna-prakash04.github.io/Netflix-UI-Clone/'
   }];
   
   return <section id="projects" className="py-20 bg-gray-800/30 relative overflow-hidden">
