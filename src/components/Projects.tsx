@@ -107,17 +107,22 @@ const Projects = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIndex) => <span key={tagIndex} className="text-xs font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/20 hover:bg-purple-400/20 transition-colors duration-300">
+                    {project.tags.map((tag, tagIndex) => 
+                      <span key={tagIndex} className="text-xs font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full border border-purple-400/20 hover:bg-purple-400/20 transition-colors duration-300">
                         {tag}
-                      </span>)}
+                      </span>
+                    )}
                   </div>
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 group/btn">
-                      <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                      Code
-                    </a>
+                    {/* Only show Code button if NOT the AI Chatbot project */}
+                    {project.title !== "AI Chatbot for Campus FAQs" && (
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 group/btn">
+                        <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
+                        Code
+                      </a>
+                    )}
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-400 font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300 group/btn">
                       <ExternalLink size={16} className="group-hover/btn:rotate-12 transition-transform duration-300" />
                     </a>
