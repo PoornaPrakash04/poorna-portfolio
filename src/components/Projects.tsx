@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
 
 const Projects = () => {
@@ -6,7 +7,7 @@ const Projects = () => {
       title: 'Task Flow Manager',
       description: 'A productivity tool built to streamline academic workflows with intuitive task management and progress tracking.',
       icon: CheckSquare,
-      tags: ['Python', 'React', 'Database'],
+      tags: ['HTML', 'CSS', 'JavaScript'],
       color: 'from-purple-600 to-pink-600',
       status: 'Completed',
       year: '2025'
@@ -15,7 +16,7 @@ const Projects = () => {
       title: 'AI Chatbot for Campus FAQs',
       description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
       icon: Bot,
-      tags: ['Python', 'AI/ML', 'NLP'],
+      tags: ['Chatling', 'AI/ML', 'Chatbot'],
       color: 'from-teal-600 to-blue-600',
       status: 'In Progress',
       year: '2025'
@@ -24,7 +25,7 @@ const Projects = () => {
       title: 'Netflix UI Clone',
       description: 'A responsive frontend replica of the Netflix interface showcasing modern web development skills.',
       icon: Monitor,
-      tags: ['React', 'CSS', 'Responsive Design'],
+      tags: ['HTML', 'CSS', 'JavaScript'],
       color: 'from-red-600 to-orange-600',
       status: 'Completed',
       year: '2025'
