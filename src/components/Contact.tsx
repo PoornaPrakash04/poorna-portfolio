@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Mail, Phone, Linkedin, Github, Send, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -10,6 +9,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -19,14 +19,49 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsLoading(true);
+
+    try {
+      // Web3Forms endpoint - replace YOUR_ACCESS_KEY with your actual access key
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_ACCESS_KEY_HERE', // Replace with your Web3Forms access key
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          from_name: 'Portfolio Contact Form',
+          to_name: 'Poorna Prakash',
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(result.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const contactInfo = [
@@ -193,10 +228,11 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                disabled={isLoading}
+                className="w-full flex items-center justify-center px-8 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 <Send size={20} className="mr-2" />
-                Send Message
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
