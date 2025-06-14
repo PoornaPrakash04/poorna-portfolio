@@ -1,15 +1,13 @@
 import { Heart, Code, Coffee } from 'lucide-react';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 py-12 border-t border-gray-800">
+  return <footer className="bg-gray-900 border-t border-gray-800 py-[20px]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Logo/Name */}
           <div className="mb-8">
-            <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-teal-400 bg-clip-text text-transparent">
-              Poorna Prakash
-            </h3>
-            <p className="text-gray-400 mt-2">B.Tech IT Student | Tech Explorer</p>
+            
+            
           </div>
 
           {/* Quick Links */}
