@@ -1,3 +1,4 @@
+
 import { Award, Users, Code, Calendar, MapPin, Sparkles } from 'lucide-react';
 const Experience = () => {
   const experiences = [{
@@ -16,6 +17,10 @@ const Experience = () => {
     icon: Users,
     description: 'Coordinating operations and driving community engagement for Google Developer Groups.',
     highlights: ['Community Building', 'Operations Management', 'Developer Relations'],
+    events: [{
+      name: 'Insperia 3.0 – Organizing Team',
+      description: 'Contributed to the planning and execution of Insperia 3.0, part of the International Women\'s Day celebration themed "Redefine Possible." Supported session flow, speaker engagement, and operational execution to amplify women\'s voices in tech and AI through impactful community-driven sessions.'
+    }],
     color: 'from-green-500 to-emerald-500',
     status: 'Active'
   }, {
@@ -25,6 +30,10 @@ const Experience = () => {
     icon: Code,
     description: 'Supporting the Computer Society chapter with technical events and skill development programs.',
     highlights: ['Technical Events', 'Workshop Coordination', 'Skill Development'],
+    events: [{
+      name: 'Explorica 6.0 – Event Coordinator',
+      description: 'Coordinated IEEE SB LBSITW\'s flagship technical fest featuring workshops, tech talks, and competitions. Managed logistics, collaborated with technical teams and speakers, and contributed to creating a vibrant platform for students to explore emerging technologies and innovations.'
+    }],
     color: 'from-blue-500 to-cyan-500',
     status: 'Active'
   }];
@@ -86,6 +95,26 @@ const Experience = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
                   {exp.description}
                 </p>
+
+                {/* Events Section */}
+                {exp.events && (
+                  <div className="mb-6 space-y-4">
+                    <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
+                      <MapPin className="w-4 h-4 mr-2 text-yellow-400" />
+                      Key Events:
+                    </h4>
+                    {exp.events.map((event, eventIndex) => (
+                      <div key={eventIndex} className="bg-gray-800/30 p-4 rounded-lg border border-gray-700/30">
+                        <h5 className="text-sm font-semibold text-yellow-400 mb-2">
+                          {event.name}
+                        </h5>
+                        <p className="text-xs text-gray-400 leading-relaxed">
+                          {event.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 {/* Highlights */}
                 <div className="space-y-3">
