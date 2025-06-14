@@ -1,5 +1,3 @@
-
-
 import { Calendar, MapPin, GraduationCap, Sparkles } from 'lucide-react';
 const About = () => {
   const education = [{
@@ -13,7 +11,7 @@ const About = () => {
       'Programming in C, Java, and Python',
       'Data Structures', 
       'Database Management Systems (DBMS)',
-      'Web Technologies (ongoing)',
+      'Web Technologies',
       'Introduction to AI & ML (exploratory learning through projects)'
     ]
   }];
@@ -118,4 +116,3 @@ const About = () => {
     </section>;
 };
 export default About;
-
