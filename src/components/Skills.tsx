@@ -92,19 +92,6 @@ const Skills = () => {
     }
   };
 
-  const getProgressWidth = (level: string) => {
-    switch (level) {
-      case 'Beginner':
-        return '35%';
-      case 'Intermediate':
-        return '70%';
-      case 'Advanced':
-        return '95%';
-      default:
-        return '0%';
-    }
-  };
-
   const interests = [{
     name: 'Artificial Intelligence',
     icon: Brain,
@@ -160,30 +147,18 @@ const Skills = () => {
                   </h3>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-3 group/skill">
-                      <div className="flex justify-between items-center">
-                        <span className="text-gray-300 font-medium flex items-center group-hover/skill:text-white transition-colors duration-300">
-                          {skill.name}
-                          {skill.trend === 'up' && <TrendingUp className="w-4 h-4 ml-2 text-green-400" />}
+                    <div key={skillIndex} className="flex justify-between items-center group/skill">
+                      <span className="text-gray-300 font-medium flex items-center group-hover/skill:text-white transition-colors duration-300">
+                        {skill.name}
+                        {skill.trend === 'up' && <TrendingUp className="w-4 h-4 ml-2 text-green-400" />}
+                      </span>
+                      <div className="flex items-center space-x-2">
+                        <span className={`text-xs font-medium px-2 py-1 rounded-full border ${getLevelColor(skill.level)}`}>
+                          {skill.level}
                         </span>
-                        <div className="flex items-center space-x-2">
-                          <span className={`text-xs font-medium px-2 py-1 rounded-full border ${getLevelColor(skill.level)}`}>
-                            {skill.level}
-                          </span>
-                          <Star className="w-4 h-4 text-yellow-400" />
-                        </div>
-                      </div>
-                      <div className="relative">
-                        <div className="w-full bg-gray-700/50 rounded-full h-3 overflow-hidden border border-gray-600/50">
-                          <div className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-1000 ease-out relative overflow-hidden group-hover/skill:animate-pulse`} style={{
-                            width: getProgressWidth(skill.level)
-                          }}>
-                            <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
-                          </div>
-                        </div>
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-full opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300"></div>
+                        <Star className="w-4 h-4 text-yellow-400" />
                       </div>
                     </div>
                   ))}
@@ -207,7 +182,7 @@ const Skills = () => {
           {interests.map((interest, index) => {
             const IconComponent = interest.icon;
             return (
-              <div key={index} className="group bg-gray-900/50 p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-2 text-center" style={{
+              <div key={index} className="group bg-gray-900/50 p-6 rounded-xl border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-500 transform hover:scale-105 hover:-rotate-2 text-center relative" style={{
                 animationDelay: `${index * 100}ms`
               }}>
                 <div className={`w-16 h-16 bg-gradient-to-br ${interest.color} rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg`}>
