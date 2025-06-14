@@ -1,3 +1,4 @@
+
 import { ExternalLink, Github, Bot, CheckSquare, Monitor, Sparkles, Calendar } from 'lucide-react';
 const Projects = () => {
   const projects = [{
@@ -7,7 +8,9 @@ const Projects = () => {
     tags: ['HTML', 'CSS', 'JavaScript'],
     color: 'from-purple-600 to-pink-600',
     status: 'Completed',
-    year: '2025'
+    year: '2025',
+    githubUrl: 'https://github.com/PoornaPrakash04/TaskFlow-Manager',
+    liveUrl: '#'
   }, {
     title: 'AI Chatbot for Campus FAQs',
     description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
@@ -15,7 +18,9 @@ const Projects = () => {
     tags: ['Chatling', 'AI/ML', 'Chatbot'],
     color: 'from-teal-600 to-blue-600',
     status: 'Completed',
-    year: '2025'
+    year: '2025',
+    githubUrl: 'https://github.com/PoornaPrakash04/AI-Chatbot-Campus',
+    liveUrl: '#'
   }, {
     title: 'Netflix UI Clone',
     description: 'A responsive frontend replica of the Netflix interface showcasing modern web development skills.',
@@ -23,8 +28,11 @@ const Projects = () => {
     tags: ['HTML', 'CSS', 'JavaScript'],
     color: 'from-red-600 to-orange-600',
     status: 'Completed',
-    year: '2025'
+    year: '2025',
+    githubUrl: 'https://github.com/PoornaPrakash04/Netflix-UI-Clone',
+    liveUrl: '#'
   }];
+  
   return <section id="projects" className="py-20 bg-gray-800/30 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
@@ -107,13 +115,13 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    <button className="flex-1 flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 group/btn">
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-teal-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 group/btn">
                       <Github size={16} className="mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
                       Code
-                    </button>
-                    <button className="flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-400 font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300 group/btn">
+                    </a>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-400 font-semibold rounded-lg hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300 group/btn">
                       <ExternalLink size={16} className="group-hover/btn:rotate-12 transition-transform duration-300" />
-                    </button>
+                    </a>
                   </div>
                 </div>
                 

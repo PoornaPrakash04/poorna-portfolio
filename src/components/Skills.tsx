@@ -6,20 +6,17 @@ const Skills = () => {
     color: 'from-blue-500 to-cyan-500',
     skills: [{
       name: 'Python',
-      level: 'Advanced',
-      levelValue: 85,
+      level: 'Intermediate',
       color: 'from-yellow-400 to-yellow-600',
       trend: 'up'
     }, {
       name: 'Java',
-      level: 'Advanced',
-      levelValue: 80,
+      level: 'Beginner',
       color: 'from-red-400 to-red-600',
       trend: 'up'
     }, {
       name: 'C',
       level: 'Intermediate',
-      levelValue: 75,
       color: 'from-blue-400 to-blue-600',
       trend: 'stable'
     }]
@@ -30,19 +27,16 @@ const Skills = () => {
     skills: [{
       name: 'DBMS',
       level: 'Intermediate',
-      levelValue: 75,
       color: 'from-green-400 to-green-600',
       trend: 'up'
     }, {
       name: 'Git/GitHub',
       level: 'Advanced',
-      levelValue: 80,
       color: 'from-purple-400 to-purple-600',
       trend: 'up'
     }, {
       name: 'Web Development',
       level: 'Intermediate',
-      levelValue: 70,
       color: 'from-teal-400 to-teal-600',
       trend: 'up'
     }]
@@ -53,13 +47,11 @@ const Skills = () => {
     skills: [{
       name: 'Canva',
       level: 'Intermediate',
-      levelValue: 65,
       color: 'from-pink-400 to-pink-600',
       trend: 'up'
     }, {
       name: 'UI/UX Design',
       level: 'Beginner',
-      levelValue: 60,
       color: 'from-indigo-400 to-indigo-600',
       trend: 'up'
     }]
@@ -70,23 +62,21 @@ const Skills = () => {
     skills: [{
       name: 'Team Leadership',
       level: 'Advanced',
-      levelValue: 90,
       color: 'from-orange-400 to-orange-600',
       trend: 'up'
     }, {
       name: 'Communication',
       level: 'Advanced',
-      levelValue: 85,
       color: 'from-cyan-400 to-cyan-600',
       trend: 'stable'
     }, {
       name: 'Problem Solving',
       level: 'Advanced',
-      levelValue: 80,
       color: 'from-lime-400 to-lime-600',
       trend: 'up'
     }]
   }];
+  
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'Beginner':
@@ -99,6 +89,7 @@ const Skills = () => {
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
     }
   };
+
   const interests = [{
     name: 'Artificial Intelligence',
     icon: Brain,
@@ -116,6 +107,7 @@ const Skills = () => {
     icon: Code,
     color: 'from-blue-500 to-indigo-500'
   }];
+
   return <section id="skills" className="py-20 bg-gray-900/30 relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0">
