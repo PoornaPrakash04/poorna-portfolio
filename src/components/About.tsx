@@ -1,9 +1,10 @@
+
 import { Calendar, MapPin, GraduationCap, Sparkles } from 'lucide-react';
 const About = () => {
   const education = [{
     period: '2023–2027',
     degree: 'B.Tech in Information Technology',
-    institution: 'LBSITW',
+    institution: 'LBS Institute Of Technology For Women',
     icon: GraduationCap,
     status: 'Current',
     color: 'from-purple-500 to-purple-700'
@@ -36,7 +37,7 @@ const About = () => {
                   My Story
                 </h3>
               </div>
-              <p className="text-gray-300 text-lg leading-relaxed">I'm a curious-minded B.Tech Information Technology student at LBSITW, passionate about exploring the tech behind the screen and solving real-world problems through code. With a focus on data engineering, Java, and Python, and a growing interest in AI and machine learning, I enjoy building impactful tools and web apps that make a difference.</p>
+              <p className="text-gray-300 text-lg leading-relaxed">I'm a curious-minded B.Tech Information Technology student at LBS Institute Of Technology For Women, passionate about exploring the tech behind the screen and solving real-world problems through code. With a focus on data engineering, Java, and Python, and a growing interest in AI and machine learning, I enjoy building impactful tools and web apps that make a difference.</p>
             </div>
 
             <div className="group bg-gray-900/50 p-8 rounded-2xl border border-gray-700/50 backdrop-blur-sm hover:border-teal-500/30 transition-all duration-500">
