@@ -8,8 +8,8 @@ const Projects = () => {
     color: 'from-purple-600 to-pink-600',
     status: 'Completed',
     year: '2025',
-    githubUrl: 'https://github.com/PoornaPrakash04/TaskFlow-Manager',
-    liveUrl: 'https://github.com/PoornaPrakash04/TaskFlow-Manager'
+    githubUrl: 'https://github.com/PoornaPrakash04/Taskflow',
+    liveUrl: 'https://github.com/PoornaPrakash04/Taskflow'
   }, {
     title: 'AI Chatbot for Campus FAQs',
     description: 'An interactive chatbot to automate event queries and provide instant support for campus-related questions.',
@@ -28,8 +28,8 @@ const Projects = () => {
     color: 'from-red-600 to-orange-600',
     status: 'Completed',
     year: '2025',
-    githubUrl: 'https://github.com/PoornaPrakash04/Netflix-UI-Clone',
-    liveUrl: 'https://github.com/PoornaPrakash04/Netflix-UI-Clone'
+    githubUrl: 'https://github.com/PoornaPrakash04/Netflixclone',
+    liveUrl: 'https://github.com/PoornaPrakash04/Netflixclone'
   }];
   
   return <section id="projects" className="py-20 bg-gray-800/30 relative overflow-hidden">
