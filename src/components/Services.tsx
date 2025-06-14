@@ -1,3 +1,4 @@
+
 import { Monitor, Code, Palette, Zap, Sparkles, Clock, Target } from 'lucide-react';
 const Services = () => {
   const services = [{
@@ -6,32 +7,28 @@ const Services = () => {
     icon: Monitor,
     status: 'Exploring',
     features: ['Responsive Design', 'Modern UI/UX', 'Cross-browser Compatibility'],
-    color: 'from-blue-500 to-cyan-500',
-    progress: 70
+    color: 'from-blue-500 to-cyan-500'
   }, {
     title: 'Frontend Development',
     description: 'Building interactive and dynamic web applications using modern frameworks and best practices.',
     icon: Code,
     status: 'Learning',
     features: ['React Applications', 'JavaScript/TypeScript', 'Component Architecture'],
-    color: 'from-purple-500 to-pink-500',
-    progress: 75
+    color: 'from-purple-500 to-pink-500'
   }, {
     title: 'Creative Solutions',
     description: 'Combining technical skills with creative thinking to solve complex problems innovatively.',
     icon: Palette,
     status: 'Developing',
     features: ['Problem Solving', 'Creative Design', 'User-Centric Approach'],
-    color: 'from-orange-500 to-red-500',
-    progress: 65
+    color: 'from-orange-500 to-red-500'
   }, {
     title: 'Emerging Technologies',
     description: 'Exploring AI/ML applications and data engineering to build next-generation solutions.',
     icon: Zap,
     status: 'Researching',
     features: ['AI/ML Integration', 'Data Processing', 'Automation Solutions'],
-    color: 'from-green-500 to-teal-500',
-    progress: 60
+    color: 'from-green-500 to-teal-500'
   }];
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -92,21 +89,6 @@ const Services = () => {
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${getStatusColor(service.status)}`}>
                     {service.status}
                   </span>
-                </div>
-
-                {/* Progress Bar */}
-                <div className="mb-6">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm text-gray-400">Progress</span>
-                    <span className="text-sm font-semibold text-white">{service.progress}%</span>
-                  </div>
-                  <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-gray-600/50">
-                    <div className={`h-full bg-gradient-to-r ${service.color} rounded-full transition-all duration-1000 ease-out relative overflow-hidden group-hover:animate-pulse`} style={{
-                  width: `${service.progress}%`
-                }}>
-                      <div className="absolute inset-0 bg-white/20 rounded-full"></div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Description */}
