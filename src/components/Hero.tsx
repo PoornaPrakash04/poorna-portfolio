@@ -129,14 +129,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
-        {/* Enhanced scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-fade-in delay-1000">
-          <span className="text-xs text-gray-500 mb-2 uppercase tracking-wider">I am ready to explore</span>
-          <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-gradient-to-b from-purple-400 to-teal-400 rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </div>
       </div>
     </section>
   );
