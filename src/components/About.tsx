@@ -1,4 +1,5 @@
 
+
 import { Calendar, MapPin, GraduationCap, Sparkles } from 'lucide-react';
 const About = () => {
   const education = [{
@@ -7,7 +8,14 @@ const About = () => {
     institution: 'LBS Institute Of Technology For Women',
     icon: GraduationCap,
     status: 'Current',
-    color: 'from-purple-500 to-purple-700'
+    color: 'from-purple-500 to-purple-700',
+    modules: [
+      'Programming in C, Java, and Python',
+      'Data Structures', 
+      'Database Management Systems (DBMS)',
+      'Web Technologies (ongoing)',
+      'Introduction to AI & ML (exploratory learning through projects)'
+    ]
   }];
   return <section id="about" className="py-20 bg-gray-800/30 relative overflow-hidden">
       {/* Background elements */}
@@ -83,9 +91,22 @@ const About = () => {
                         <h4 className="text-lg font-bold text-white mb-1 group-hover:text-purple-400 transition-colors duration-300">
                           {item.degree}
                         </h4>
-                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">
                           {item.institution}
                         </p>
+                        
+                        {/* Key Academic Modules */}
+                        <div className="mt-4">
+                          <h5 className="text-sm font-semibold text-teal-400 mb-3">Key Academic Modules:</h5>
+                          <div className="space-y-2">
+                            {item.modules.map((module, moduleIndex) => (
+                              <div key={moduleIndex} className="flex items-start">
+                                <div className="w-1.5 h-1.5 bg-gradient-to-r from-purple-400 to-teal-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                <span className="text-gray-300 text-sm">{module}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>;
@@ -97,3 +118,4 @@ const About = () => {
     </section>;
 };
 export default About;
+
