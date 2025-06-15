@@ -66,9 +66,9 @@ const Hero = () => {
             {/* Main heading with enhanced typography */}
             <div className="space-y-4">
               <h1 className="text-6xl md:text-8xl font-bold animate-fade-in leading-tight">
-                <span className="text-white">Poorna</span>
+                <span className="bg-gradient-to-r from-purple-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">Poorna</span>
                 <br />
-                <span className="bg-gradient-to-r from-purple-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="text-white">
                   Prakash
                 </span>
               </h1>
